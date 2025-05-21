@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff33ff, #33ffff);
+}
+
+/* Neon glow effect */
+@keyframes neonGlow {
+  0% { box-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff; }
+  50% { box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff; }
+  100% { box-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff; }
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  animation: gradientShift 10s ease infinite;
+  background-size: 200% 200%;
+}
